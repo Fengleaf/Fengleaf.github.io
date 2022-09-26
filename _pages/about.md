@@ -5,13 +5,14 @@ excerpt: "關於作者"
 sitemap: true
 permalink: /about/
 header:
-  overlay_image: /assets/imgs/Taipei_Night.jpg
-  caption: "台北夜景"
+  overlay_image: /assets/imgs/pi.png
+  caption: "pi"
 ---
 
 # 有關於作者
-```python
-Author:
-    self.name = RTon
-    self.test = True
+```C#
+Class Author()
+{
+  public string name = "Fengling";
+}
 ```

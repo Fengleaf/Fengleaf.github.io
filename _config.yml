@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "air" # "default", "air", "aqua", "contrast", "dark",
 
 # Site Settings
 locale                   : "zh-TW"
-title                    : "Fengling's coding space"
+title                    : "Fengling's Website"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "封鈴"
