@@ -51,7 +51,7 @@ NPC 做出動作後，紀錄每一個 frame 的關節旋轉，在玩家做動作
 候，紀錄玩家每個 Frame 的動作，然後去比對。  
 玩家可能做了一連串的動作，所以先對玩家的動作中找出最接近 NPC
 動作的 frame，從那個 frame 開始去對接下來的每個 frame 比對。
-```C#
+```
 for (int i = 0; i < player.boneFrames.Count; i++)
 {
     total = 0;
@@ -72,28 +72,28 @@ for (int i = 0; i < player.boneFrames.Count; i++)
 ```
 ```
 for (int j = 0; j < npc.boneFrames.Count; j++)
-        {
-            if (j + index >= player.boneFrames.Count)
-                return 0;
-            float total2 = 0;
-            foreach (KeyValuePair<int, Transform> pair in npc.boneFrames[j])
-            {
-                Transform npcTransform = pair.Value;
-                Transform playerTransform = player.boneFrames[j + index][pair.Key];
-                float distance = ComputeRotationDistance(playerTransform, npcTransform);
-                float score = 0;
-                if (distance < 40)
-                    score = 1;
-                else if (distance < 20)
-                    score = 2;
-                else if (distance < 15)
-                    score = 3;
-                else if (distance < 10)
-                    score = 4;
-                total2 += score;
-            }
-            total += total2;
-        }
+{
+    if (j + index >= player.boneFrames.Count)
+        return 0;
+    float total2 = 0;
+    foreach (KeyValuePair<int, Transform> pair in npc.boneFrames[j])
+    {
+        Transform npcTransform = pair.Value;
+        Transform playerTransform = player.boneFrames[j + index][pair.Key];
+        float distance = ComputeRotationDistance(playerTransform, npcTransform);
+        float score = 0;
+        if (distance < 40)
+            score = 1;
+        else if (distance < 20)
+            score = 2;
+        else if (distance < 15)
+            score = 3;
+        else if (distance < 10)
+            score = 4;
+        total2 += score;
+    }
+    total += total2;
+}
 ```
 
 ### 邊界判斷
