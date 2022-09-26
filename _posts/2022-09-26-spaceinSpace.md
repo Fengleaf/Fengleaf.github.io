@@ -17,12 +17,11 @@ tags:
 一場意外導致迷失在太空中的太空員，需要透過行星上的物品來逃離這片太空，設法打倒敵人、完成任務最後成功生還。
 
 ### 遊戲玩法  
- 
 
 ### 遊戲系統
 
-### 遊戲影片
-{% include video id="TADDn3EzxOE" provider="youtube" %}
+### 遊玩影片
+{% include video id="_09EkrfhrQM" provider="youtube" %}
 
 ### 連結  
 > [Game](https://drive.google.com/drive/folders/1jzYNt_xk2yRsRwoIykv2MM4kn1xZdInk?usp=sharing)
