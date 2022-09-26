@@ -64,7 +64,7 @@ BVH 檔案分成兩個區塊，HIERARCHY 與 Motion
 - HIERARCHY
   表示骨骼的位置、旋轉、子骨骼等資訊，其中 CHANNELS 表示骨骼使用到的維度資訊，position 表示位置、rotation 表示旋轉。
 
-```BVH
+```
 HIERARCHY
 ROOT Hips
 {
@@ -107,7 +107,7 @@ Frame Time: 0.033333
 
 我們先為整個 BVH 定義兩個 class 來儲存資料，第一個是 BVHJoint，表示一個骨骼，當中包含 Channels 的順序、MOTION 中的對應數值，實際物件 GameObject 的骨骼以及父節點。
 
-```C#
+```
 public class BVHJoint : MonoBehaviour
 {
     public const string XPosition = "Xposition";
@@ -125,7 +125,7 @@ public class BVHJoint : MonoBehaviour
 
 第二個則是整個 BVH，儲存一些像是 MOTION 中 frame time 與 Frames，儲存所有骨骼以及未來需要用到的路徑資料。
 
-```C#
+```
 public class BVH : MonoBehaviour
 {
     public PathManager pathManager;
@@ -145,7 +145,7 @@ public class BVH : MonoBehaviour
 讀取時，首先對於 HIERARCHY，逐行讀取，一開始會讀到 ROOT，表示整個骨骼的根節點，繼續讀取得到 OFFSET 和 CHANNELS，因為是 ROOT 所以 OFFSET 基本上都是 0，而 CHANNELS 則有六個，XYZ 的位置和旋轉。  
 接著讀到 JOINT，表示一個新的子節點骨骼，接著一樣得到 OFFSET 和 CHANNELS 直到最後一個節點會得到 End Site 表示結束。
 
-```C#
+```
 if (inputs[0] == "ROOT")
 {
     jointName = line.Split(' ')[1];
@@ -184,7 +184,7 @@ else if (inputs[0] == "End")
 ### 實現動畫
 有了資料之後就要依照MOTION中的資料來實現動畫，透過每一個frame time來給每一個骨骼新的旋轉。同時，如果只套用MOTION中的資料，動畫會有明顯一格一格切換的頓感，所以我們再為每個Frame再插入更多Frame，利用線性插值的方式取得兩個資料間的數值並套用上去，得到更順滑的動作。  
 接著只要依序呼叫每個BVHJoint.UpdateToFrame即可。
-```C#
+```
 public void UpdateToFrame(int frameNumber, float time)
 {
     if (frameNumber >= frames.Count)
@@ -208,7 +208,7 @@ public void UpdateToFrame(int frameNumber, float time)
 ```
 ### 綁定人物
 BVH中的骨骼可以用來對應到實際的模型，找要找到骨骼名稱間的對應關係即可。這邊使用UnityChan來作範例。
-```C#
+```
 private Transform SearchHumanBoneTransformByName(string name)
 {
     HumanBodyBones temp = new HumanBodyBones();
@@ -235,7 +235,7 @@ private Transform SearchHumanBoneTransformByName(string name)
 }
 ```
 同樣的不斷更新資料上去來移動人物。
-```C#
+```
 public void UpdateMotionPos(GameObject people)
 {
     int CurrentIndex = 0;
