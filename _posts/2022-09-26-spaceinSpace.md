@@ -10,7 +10,6 @@ tags:
 - 遊戲
 - 程式
 ---
-# space in Space
 
 ### 遊戲簡介 
 
