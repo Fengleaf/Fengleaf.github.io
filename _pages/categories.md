@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: archive
 permalink: /categories/
 title: "類別"
@@ -23,4 +23,4 @@ author_profile: true
     </ul>
   </div>
 {% endfor %}
-</div>
+</div> -->

@@ -4,9 +4,9 @@ layout: single
 excerpt: "作品集"
 sitemap: true
 permalink: /works/
-header:
-  overlay_image: /assets/imgs/Taipei_Night.jpg
-  caption: "台北夜景"
+# header:
+#   overlay_image: /assets/imgs/Taipei_Night.jpg
+#   caption: "台北夜景"
 author_profile: true
 toc: true
 ---

@@ -2,10 +2,10 @@
 main:
   - title: "Quick-Start Guide"
     url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  - title: "網誌"
-    url: /year-archive/
-  - title: "類別"
-    url: /categories/
+  # - title: "網誌"
+  #   url: /year-archive/
+  # - title: "類別"
+  #   url: /categories/
   - title: "作品"
     url: /works/
   - title: "關於"
