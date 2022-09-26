@@ -1,6 +1,6 @@
 ---
 title: "作品集"
-layout: single
+layout: archive
 excerpt: "作品集"
 sitemap: true
 permalink: /works/
