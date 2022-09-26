@@ -8,7 +8,6 @@ categories:
 tags:
 - Unity
 - 遊戲
-- 程式
 ---
 
 ### 遊戲簡介 
