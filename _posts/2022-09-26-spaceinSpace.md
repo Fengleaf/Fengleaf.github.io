@@ -44,6 +44,9 @@ tags:
     * 黑洞
     黑洞會直接把玩家吸入，失去所有生命。  
     ![](/assets/imgs/Unity/spaceInSpace/Black.jpg)
+    * 白洞
+    與黑洞相反，會將玩家往外推開。
+    ![](/assets/imgs/Unity/spaceInSpace/White.jpg)
     * 傳送門  
     玩家進入後會被傳送到另一個傳送門的位置。
     ![](/assets/imgs/Unity/spaceInSpace/Teleport.jpg)
