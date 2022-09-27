@@ -41,10 +41,10 @@ tags:
     * 加速帶  
     玩家經過後會被往前推動一段距離，可以用來快速前進或躲避攻擊。  
     ![](/assets/imgs/Unity/spaceInSpace/Speed.jpg)
-    * 黑洞
+    * 黑洞  
     黑洞會直接把玩家吸入，失去所有生命。    
     ![](/assets/imgs/Unity/spaceInSpace/Black.jpg)
-    * 白洞
+    * 白洞  
     與黑洞相反，會將玩家往外推開。  
     ![](/assets/imgs/Unity/spaceInSpace/White.jpg)
     * 傳送門  
