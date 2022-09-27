@@ -58,7 +58,6 @@ tags:
 ![](/assets/imgs/Unity/EventEditor/Dialogue.jpg)
 Dialogue同時支援一些特殊指令，如\h即為顯示主角名字。
 * 事件點-命令行  
-
 ![](/assets/imgs/Unity/EventEditor/NewCommand.png)  
 目前支援的命令為上圖中的項目(Show Balloon未實作)。  
     * Condition Branch
