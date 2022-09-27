@@ -49,7 +49,7 @@ tags:
     ![](/assets/imgs/Unity/spaceInSpace/White.jpg)
     * 傳送門  
     玩家進入後會被傳送到另一個傳送門的位置。 
-    ![](/assets/imgs/Unity/spaceInSpace/Teleport.jpg)
+    ![](/assets/imgs/Unity/spaceInSpace/Tele.jpg)
 * 存讀檔
 遊戲可以存檔，以從中斷的地方繼續遊玩。
 
