@@ -51,7 +51,7 @@ NPC 做出動作後，紀錄每一個 frame 的關節旋轉，在玩家做動作
 候，紀錄玩家每個 Frame 的動作，然後去比對。  
 玩家可能做了一連串的動作，所以先對玩家的動作中找出最接近 NPC
 動作的 frame，從那個 frame 開始去對接下來的每個 frame 比對。
-```C#
+```csharp
 for (int i = 0; i < player.boneFrames.Count; i++)
 {
     total = 0;
