@@ -33,22 +33,22 @@ tags:
 * 敵人與特殊物件
 敵人包含Boss和小怪，他們會發出攻擊來使得玩家的生命值降低，需要一些操作技巧來躲避。
     * 小魷魚
-    他們會每隔一定間格發出子彈，攻擊玩家。子彈也會有固定的移動速度，有可能是節拍的兩倍或是一半。
+    他們會每隔一定間格發出子彈，攻擊玩家。子彈也會有固定的移動速度，有可能是節拍的兩倍或是一半。  
     ![](/assets/imgs/Unity/spaceInSpace/Enemy.jpg)
-    * 雷射
-    雷射每隔一定間格發出，並持續一段時間，玩家一旦碰到就會直接失去所有生命。
+    * 雷射  
+    雷射每隔一定間格發出，並持續一段時間，玩家一旦碰到就會直接失去所有生命。  
     ![](/assets/imgs/Unity/spaceInSpace/Lazer.jpg)
-    * 加速帶
+    * 加速帶  
     玩家經過後會被往前推動一段距離，可以用來快速前進或躲避攻擊。  
     ![](/assets/imgs/Unity/spaceInSpace/Speed.jpg)
     * 黑洞
-    黑洞會直接把玩家吸入，失去所有生命。  
+    黑洞會直接把玩家吸入，失去所有生命。    
     ![](/assets/imgs/Unity/spaceInSpace/Black.jpg)
     * 白洞
-    與黑洞相反，會將玩家往外推開。
+    與黑洞相反，會將玩家往外推開。  
     ![](/assets/imgs/Unity/spaceInSpace/White.jpg)
     * 傳送門  
-    玩家進入後會被傳送到另一個傳送門的位置。
+    玩家進入後會被傳送到另一個傳送門的位置。 
     ![](/assets/imgs/Unity/spaceInSpace/Teleport.jpg)
 * 存讀檔
 遊戲可以存檔，以從中斷的地方繼續遊玩。
