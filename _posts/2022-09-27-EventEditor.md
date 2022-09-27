@@ -59,55 +59,44 @@ tags:
 Dialogue同時支援一些特殊指令，如\h即為顯示主角名字。
 * 事件點-命令行  
 
-![](/assets/imgs/Unity/EventEditor/NewCommand.png)
-目前支援的命令為上圖中的項目(Show Balloon未實作)。
-
+![](/assets/imgs/Unity/EventEditor/NewCommand.png)  
+目前支援的命令為上圖中的項目(Show Balloon未實作)。  
     * Condition Branch
     條件分歧，滿足指定條件後執行行為，未滿足條件則執行另一條行為。
     ![](/assets/imgs/Unity/EventEditor/Branch.jpg)
     如上圖條件中，須滿足房間門開關為Off狀態，則會執行Condition Ok Commands，顯示完成對話框。若房間門開關為On，則會顯示失敗。兩條線都可以再繼續設置更多命令或是條件。
     ![](/assets/imgs/Unity/EventEditor/BranchSwitches.png)
     選擇開關條件會顯示遊戲中設置的所有開關以供快速瀏覽。
-
     * Destroy Event、Dialogue
     ![](/assets/imgs/Unity/EventEditor/DesDia.jpg)
     Destroy Event即為直接破壞這個事件，可用於取得物品時，場頸上的物品需要消失時。  
     Dialogue即為顯示對話框。
-
     * Gain Item、Set Switches
     ![](/assets/imgs/Unity/EventEditor/ItemSwitches.jpg)
     獲取物品-可以設定要獲得什麼物品與獲得數量。  
     設置開關-可以設定完成什麼事件後，將開關打開作為Flag。
-
     * Game Over
     ![](/assets/imgs/Unity/EventEditor/GameOver.jpg)
     遊戲結束，會顯示設定的結束畫面，Is Win用來作為判斷是勝利或是失敗，用以顯示不同的畫面。
-
     * Input
     ![](/assets/imgs/Unity/EventEditor/Input.jpg)
     顯示輸入框，並可以設定正確答案，輸入正確的話執行Correct Commands，錯誤則會執行Wrong Commands。
     ![](/assets/imgs/Unity/EventEditor/InputBox.jpg)
-
     * Play BGM、Play SE
     ![](/assets/imgs/Unity/EventEditor/Audio.jpg)
     播放背景音樂與音效、可以設定音量。
-
     * Selection
     ![](/assets/imgs/Unity/EventEditor/Selection.jpg)
     選項分歧，可以設定兩個選項讓玩家選擇，並根據選擇的選項來執行不同的命令。如上圖選擇選項1則為顯示對話框，選項2則為直接遊戲結束。
-    
     * Set Animation Parameter
     ![](/assets/imgs/Unity/EventEditor/Animation.jpg)
     設定動畫參數，為了執行unity的Anamation，可以設置參數，包含Trigger、int、bool、floats。
-    
     * Set Direction、Player Name、Screen Color
     ![](/assets/imgs/Unity/EventEditor/DNC.jpg)
     設定物件方向、設定輸入玩家名字、設定畫面顏色。
-    
     * Transition
     ![](/assets/imgs/Unity/EventEditor/Transition.jpg)
     玩家或物件轉移，可以移動物件或是快速設定位置。根據Speed來決定速度。
-    
     * Wait
     ![](/assets/imgs/Unity/EventEditor/Wait.jpg)
     等待，即為等待指定時間後再繼續往下執行。
