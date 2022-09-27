@@ -53,7 +53,7 @@ tags:
 ### 粒子生成
 每塊布料用一個ClothSystem.cs 來管理。需要儲存每一顆粒子，它們的位置還有為了能繪製實際圖片所需要的UV和三角形頂點資訊。  
 布料模擬是利用彈簧系統，我們使用Mass-spring model架構來進行模擬。因此還需要建立每一顆粒子之間的彈簧，
-```
+```csharp
 public List<GameObject> Particles = new List<GameObject>();
 public List<ParticleCollider> Colliders = newList<ParticleCollider>();
 public List<Vector3> Vertexes = new List<Vector3>();
@@ -65,7 +65,7 @@ private List<SpringSystem> springArray = new List<SpringSystem>();
 如上圖Mass-spring model，一塊布料的粒子之間可以有三種受力，包含拉力、剪切力與彎曲力，分別可以藉由不同粒子間的連接來達成彼此的約束進而模擬這三種力。 
 
 首先產生粒子，產生的同時計算uv與彈簧。因為布料為方形，uv座標中左下角為(0,0)，右上角為(1,1)，所以粒子的索引值除以邊長就能得到它的uv座標。
-```
+```csharp
 for (int i = 0; i < SideCount; i++)
 {
     for (int j = 0; j < SideCount; j++)
@@ -117,7 +117,7 @@ mesh.uv = UVs.ToArray();
 mesh.triangles = TrianglesIndexes.ToArray();
 ```
 ![](/assets/imgs/Unity/ParticleSimulation/Triangle.jpg)
-```
+```csharp
 private void AddSpringWithIndex(int index, GameObject parent)
 {
     int NextIndex;
@@ -172,7 +172,7 @@ private void AddSpringWithIndex(int index, GameObject parent)
 ```
 ### 粒子模擬
 彈簧之間互相拉扯，根據公式計算力以及重力。
-```
+```csharp
 public Vector3 CountForce(Vector3 startSpeed, Vector3 endSpeed, Vector3 startPos, Vector3 endPos)
 {
     // Damped spring
@@ -181,7 +181,7 @@ public Vector3 CountForce(Vector3 startSpeed, Vector3 endSpeed, Vector3 startPos
         * (startPos - endPos) / distance;
 }
 ```
-```
+```csharp
 Vector3 tempForce = springArray[i].CountForce(startSpeed, endSpeed, startPos, endPos);
 // 彈簧拉扯，對起始粒子來說是正向，對終點粒子來說是負向
 tempspeedArray[startIndex] += tempForce / Mass * TimeStep;
@@ -192,7 +192,7 @@ speedArray[i] += Vector3.up * Gravity * TimeStep;
 ```
 接著決定力的運作，分別有Euler和Runge Kutta。  
 * Euler即最基本的x = vt;
-```
+```csharp
 private Vector3 EulerMethod(int index, float time)
 {
     // x = vt

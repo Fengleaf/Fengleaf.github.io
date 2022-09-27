@@ -70,7 +70,7 @@ for (int i = 0; i < player.boneFrames.Count; i++)
     }
 }
 ```
-```
+```csharp
 for (int j = 0; j < npc.boneFrames.Count; j++)
 {
     if (j + index >= player.boneFrames.Count)
