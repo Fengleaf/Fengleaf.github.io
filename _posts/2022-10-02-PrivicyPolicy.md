@@ -8,8 +8,6 @@ categories:
 tags:
 - 隱私權
 - 遊戲
-games:
-- 益智
 ---
 
 FenglingPrimeGame（以下簡稱"開發者"）制定如下個人信息保護方針，
