@@ -12,13 +12,11 @@ header:
 ## 有關於作者
 臺灣科技大學資訊工程系畢業，內心渴求著可以共同奮鬥的同伴的遊戲開發者，尋找工作中。
 
-{% mermaid %}
 graph TD;
     A-->B;
     A-->C;
     B-->D;
     C-->D;
-{% endmermaid %}
 
 ### 零轉-初新者
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="../assets/imgs/About/Book.png" 

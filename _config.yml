@@ -275,9 +275,8 @@ compress_html:
     envs: development
 
 # gems
-gems: [jekyll-mermaid]
 mermaid:
-  src: 'mermaid.js'
+  src: 'https://cdn.rawgit.com/knsv/mermaid/6.0.0/dist/mermaid.js'
 
 # Defaults
 defaults:
