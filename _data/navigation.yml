@@ -10,3 +10,5 @@ main:
     url: /works/
   - title: "關於"
     url: /about/
+  - title: "遊戲"
+    url: /games/
