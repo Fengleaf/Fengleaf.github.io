@@ -8,7 +8,7 @@ main:
   #   url: /categories/
   - title: "作品"
     url: /works/
-  - title: "關於"
-    url: /about/
   - title: "遊戲"
     url: /games/
+  - title: "關於"
+    url: /about/

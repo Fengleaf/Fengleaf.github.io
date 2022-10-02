@@ -106,7 +106,7 @@ author:
   avatar           : "/assets/imgs/Fengleaf.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Graduated NTUST CSIE"
   location         : "Taiwan"
-  email            : "as61002@gmail.com"
+  email            : "fenglingprimegame@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
