@@ -7,7 +7,7 @@ author_profile: true
 
 <div id="archives">
 {% for category in site.categories %}
-    <h3>{{category.name}}</h3>
+    <h3>{{category | first}}</h3>
     {{category.name}}
     {{category.title}}
     123
