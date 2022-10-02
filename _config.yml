@@ -275,6 +275,8 @@ compress_html:
     envs: development
 
 # gems
+mermaid:
+  src: "./assets/_mermaid/mermaid.js"
 
 # Defaults
 defaults:
