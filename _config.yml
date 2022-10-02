@@ -277,6 +277,8 @@ compress_html:
 # gems
 mermaid:
   src: "./assets/_mermaid/mermaid.js"
+gem:
+  - jekyll-mermaid
 
 # Defaults
 defaults:
