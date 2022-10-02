@@ -277,7 +277,7 @@ compress_html:
 
 # gems
 mermaid:
-  src: '/assets/_mermaid/mermaid.min.js'
+  src: 'https://unpkg.com/mermaid@7.1.2/dist/mermaid.js'
 
 # Defaults
 defaults:
