@@ -228,6 +228,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-mermaid
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -276,9 +277,7 @@ compress_html:
 
 # gems
 mermaid:
-  src: "./assets/_mermaid/mermaid.js"
-gem:
-  - jekyll-mermaid
+  src: '/assets/_mermaid/mermaid.min.js'
 
 # Defaults
 defaults:
