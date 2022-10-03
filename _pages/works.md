@@ -14,7 +14,7 @@ toc: true
 {% for category in site.categories %}
   <div class="archive-group">
     {% capture category_name %}{{ category | first }}{% endcapture %}
-    {% if capture_name != "遊戲" %}
+    {% if category_name != "遊戲" %}
       <div id="#{{ category_name | slugize }}"></div>
       <h3 class="category-head">{{ category_name }}</h3>
       <a name="{{ category_name | slugize }}"></a>
