@@ -92,7 +92,7 @@ graph TD;
 subgraph 基本技能
 ds[&lt;img src&#61;&#39;../assets/imgs/About/DataStruct.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;資料結構 Lv 10 有內建的我還要要會實作嗎,至少懂它是幹嘛的.&#39;/&gt;]
 
-al[&lt;img src&#61;&#39;../assets/imgs/About/Algo.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;演算法 Lv 10 你學會寫程式了嗎?->否->學啊.&#39;/&gt;]
+al[&lt;img src&#61;&#39;../assets/imgs/About/algo.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;演算法 Lv 10 你學會寫程式了嗎?->否->學啊.&#39;/&gt;]
 
 se[&lt;img src&#61;&#39;../assets/imgs/About/SoftEngine.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;軟體工程 Lv 10 文件,設計,實作,測試.&#39;/&gt;]
 
@@ -102,7 +102,7 @@ unity[&lt;img src&#61;&#39;../assets/imgs/About/Unity2.png&#39; width&#61;&#39;3
 
 ds---coding
 al---coding
-es---coding
+se---coding
 coding---unity
 
 end
