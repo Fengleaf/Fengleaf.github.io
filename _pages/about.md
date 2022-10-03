@@ -81,24 +81,6 @@ rm2---unity
 c++---unreal
 end
 
-subgraph 額外技能
-pi[&lt;img src&#61;&#39;../assets/imgs/About/pi.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;進階數學 Lv 10 因為喜歡多學了一點.&#39;/&gt;]
-
----pm[&lt;img src&#61;&#39;../assets/imgs/About/PureMath.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;純數學 Lv 10 哈代認為應用數學非常醜陋和枯燥.哈代偏愛純粹數學,常把純粹數學跟畫和詩相提並論.他認為應用數學只不過是在數學框架內尋求世界的物理原理,而純粹數學則表達了獨立於物理世界的另一種真實.在他眼中,真實數學具有永恆的美學價值,而數學的基本和枯燥的部分擁有實用價值. 我也這麼覺得.&#39;/&gt;]
-
----prime[&lt;img src&#61;&#39;../assets/imgs/About/prime.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;數論 Lv 10 質數有無窮多個.&#39;/&gt;]
-
----cal[&lt;img src&#61;&#39;../assets/imgs/About/Calculus.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;微積分 Lv 10 想精通又沒精的領域.&#39;/&gt;]
-
----prob[&lt;img src&#61;&#39;../assets/imgs/About/prob.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;機率與統計 Lv 10 抽象又難學的東西==.&#39;/&gt;]
-
-end
-
-subgraph 被動技能
-word[&lt;img src&#61;&#39;../assets/imgs/About/Word.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;Word Lv 10 沒辦法要寫文件.&#39;/&gt;]
-
-excel[&lt;img src&#61;&#39;../assets/imgs/About/Excel.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;Excel Lv 10 因為要寫文件.&#39;/&gt;]
-end
 </div>
 
 ### 三轉-程式設計師
