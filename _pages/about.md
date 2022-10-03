@@ -39,8 +39,10 @@ b
 ---d[&lt;img src&#61;&#39;../assets/imgs/About/English.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;英文 Lv 10 可以講點基礎的外語了.&#39;/&gt;]
 b
 ---e[&lt;img src&#61;&#39;../assets/imgs/About/Chinese.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;中文 Lv 10 要學點表達能力.&#39;/&gt;]
+b
+---j[&lt;img src&#61;&#39;../assets/imgs/About/Japanese.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;日文 Lv 10 為了看動漫.&#39;/&gt;]
 c
----g[&lt;img src&#61;&#39;../assets/imgs/About/Math3.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;進階數學 Lv 10 要變強了.&#39;/&gt;]
+---g[&lt;img src&#61;&#39;../assets/imgs/About/Math3.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;進階數學 Lv 5 要變強了.&#39;/&gt;]
 f
 ---h[&lt;img src&#61;&#39;../assets/imgs/About/RM.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;PRG Maker Lv 10 學習使用RPG Maker設計遊戲.&#39;/&gt;]
 end
@@ -68,8 +70,6 @@ ts[&lt;img src&#61;&#39;../assets/imgs/About/TS.png&#39; width&#61;&#39;30&#39;h
 
 python[&lt;img src&#61;&#39;../assets/imgs/About/py.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;Python Lv 10 為了作業碰了一點.&#39;/&gt;]
 
-ml[&lt;img src&#61;&#39;../assets/imgs/About/ml.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;機器學習 Lv 10 為了作又業碰了一點.&#39;/&gt;]
-
 unreal[&lt;img src&#61;&#39;../assets/imgs/About/Unreal.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;Unreal Lv 10 學了一點.&#39;/&gt;]
 
 coding---c
@@ -80,7 +80,6 @@ coding---ruby
 ruby---rm2
 coding---ts
 coding---python
-python---ml
 rm2---unity
 c++---unreal
 end
@@ -90,20 +89,32 @@ end
 <div class="mermaid">
 graph TD; 
 subgraph 基本技能
-ds[&lt;img src&#61;&#39;../assets/imgs/About/DataStruct.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;資料結構 Lv 10 有內建的我還要要會實作嗎,至少懂它是幹嘛的.&#39;/&gt;]
+ds[&lt;img src&#61;&#39;../assets/imgs/About/DataStruct.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;資料結構 Lv 5 有內建的我還要要會實作嗎,至少懂它是幹嘛的.&#39;/&gt;]
 
-al[&lt;img src&#61;&#39;../assets/imgs/About/algo.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;演算法 Lv 10 你學會寫程式了嗎?->否->學啊.&#39;/&gt;]
+al[&lt;img src&#61;&#39;../assets/imgs/About/algo.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;演算法 Lv 5 你學會寫程式了嗎?->否->學啊.&#39;/&gt;]
 
-se[&lt;img src&#61;&#39;../assets/imgs/About/SoftEngine.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;軟體工程 Lv 10 文件,設計,實作,測試.&#39;/&gt;]
+se[&lt;img src&#61;&#39;../assets/imgs/About/SoftEngine.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;軟體工程 Lv 5 文件,設計,實作,測試.&#39;/&gt;]
 
-coding[&lt;img src&#61;&#39;../assets/imgs/About/Coding2.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;程式設計 Lv 10 真的可以做出成品.&#39;/&gt;]
+coding[&lt;img src&#61;&#39;../assets/imgs/About/Coding2.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;程式設計 Lv 5 真的可以做出成品.&#39;/&gt;]
 
-unity[&lt;img src&#61;&#39;../assets/imgs/About/Unity2.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;進階Unity Lv 10 懂更多機制,能寫出更多功能.&#39;/&gt;]
+unity[&lt;img src&#61;&#39;../assets/imgs/About/Unity2.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;進階Unity Lv 5 懂更多機制,能寫出更多功能.&#39;/&gt;]
+
+ml[&lt;img src&#61;&#39;../assets/imgs/About/ml.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;機器學習 Lv 1 為了作業又碰了一點.&#39;/&gt;]
 
 ds---coding
 al---coding
 se---coding
 coding---unity
+end
+</div>
 
+### 四轉-遊戲程式設計師
+<div class="mermaid">
+graph TD; 
+subgraph 基本技能
+cg[&lt;img src&#61;&#39;../assets/imgs/About/cg.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;電腦圖學 Lv 1 這根本新的職業.&#39;/&gt;]
+end
+subgraph 額外技能
+bl[&lt;img src&#61;&#39;../assets/imgs/About/Blender.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;Blender Lv 1 有時候需要自給自足.&#39;/&gt;]
 end
 </div>
