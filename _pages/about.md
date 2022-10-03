@@ -7,6 +7,10 @@ permalink: /about/
 mermaid: true
 ---
 
+{% if page.mermaid %}
+  {% include mermaid.html %}
+{% endif %}
+
 ## 有關於作者
 臺灣科技大學資訊工程系畢業，內心渴求著可以共同奮鬥的同伴的遊戲開發者，尋找工作中。  
 
