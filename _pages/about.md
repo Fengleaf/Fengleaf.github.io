@@ -16,23 +16,10 @@ mermaid: true
 
 <div class="mermaid">
 graph TD; 
+a[&lt;img src&#61;&#39;../assets/imgs/About/Book.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;/&gt;]
+-->
+b[&lt;img src&#61;&#39;../assets/imgs/About/Speak.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;/&gt;]
 a
 -->
-b[&lt;img src&#61;&#39;../assets/imgs/About/Speak.png&#39;title&#61;&#39;語言 Lv 10 溝通的基底.&#39;&gt;]
-a
--->
-c[&lt;img src&#61;&#39;../assets/imgs/About/Math.png&#39;title&#61;&#39;數學 Lv 10 邁向工程與科學的第一步.&#39;&gt;]
+c[&lt;img src&#61;&#39;../assets/imgs/About/Math.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;/&gt;]
 </div>
-
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="../assets/imgs/About/Book.png" 
-title="學習 Lv 15/∞
-大部分技能的前置技能，最好點滿。"/>  
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;▕  
-&emsp;&emsp;&emsp;&emsp;&ensp;&ensp; ┌──────┴──────┐  
-&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;▕&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; ▕   
-&emsp;&emsp;&emsp;&emsp;<img src="../assets/imgs/About/Speak.png" 
-title="語言 Lv 10/∞
-溝通的基底。"/>
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="../assets/imgs/About/Math.png" 
-title="數學 Lv 10/∞
-邁向工程與科學的第一步。"/>  
