@@ -56,11 +56,11 @@ c[&lt;img src&#61;&#39;../assets/imgs/About/C.png&#39; width&#61;&#39;30&#39;hei
 
 c++[&lt;img src&#61;&#39;../assets/imgs/About/C++.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;C++ Lv 10 開始學習C++語言.&#39;/&gt;]
 
-unity[&lt;img src&#61;&#39;../assets/imgs/About/unity.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;Unity Lv 10 為了開發遊戲踏出了第一步.&#39;/&gt;]
+unity[&lt;img src&#61;&#39;../assets/imgs/About/Unity.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;Unity Lv 10 為了開發遊戲踏出了第一步.&#39;/&gt;]
 
 c#[&lt;img src&#61;&#39;../assets/imgs/About/CSharp.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;C# Lv 10 為了開發遊戲踏出了第一步.&#39;/&gt;]
 
-ruby[&lt;img src&#61;&#39;../assets/imgs/About/ruby.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;Ruby Lv 10 為了精通Rpg Maker.&#39;/&gt;]
+ruby[&lt;img src&#61;&#39;../assets/imgs/About/Ruby.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;Ruby Lv 10 為了精通Rpg Maker.&#39;/&gt;]
 
 rm2[&lt;img src&#61;&#39;../assets/imgs/About/RM2.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;RPG Maker2 Lv 10 會寫腳本可以做更多功能了.&#39;/&gt;]
 
@@ -100,7 +100,10 @@ coding[&lt;img src&#61;&#39;../assets/imgs/About/Coding2.png&#39; width&#61;&#39
 
 unity[&lt;img src&#61;&#39;../assets/imgs/About/Unity2.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;進階Unity Lv 10 懂更多機制,能寫出更多功能.&#39;/&gt;]
 
-ds & al & se---coding---unity
+ds---coding
+al---coding
+es---coding
+coding---unity
 
 end
 </div>
