@@ -74,11 +74,7 @@ unreal[&lt;img src&#61;&#39;../assets/imgs/About/Unreal.png&#39; width&#61;&#39;
 
 coding---c---c++---c#
 c#---unity
-coding---ruby---rm2
-coding---ts
-coding---python---ml
-rm2---unity
-c++---unreal
+
 
 end
 </div>
