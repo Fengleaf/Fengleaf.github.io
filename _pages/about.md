@@ -73,9 +73,16 @@ ml[&lt;img src&#61;&#39;../assets/imgs/About/ml.png&#39; width&#61;&#39;30&#39;h
 unreal[&lt;img src&#61;&#39;../assets/imgs/About/Unreal.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;Unreal Lv 10 學了一點.&#39;/&gt;]
 
 coding---c
+c---c++
+c++---c#
 c#---unity
-
-
+coding---ruby
+ruby---rm2
+coding---ts
+coding---python
+python---ml
+rm2---unity
+c++---unreal
 end
 </div>
 
