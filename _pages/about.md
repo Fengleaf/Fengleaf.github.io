@@ -50,20 +50,35 @@ end
 <div class="mermaid">
 graph TD; 
 subgraph 基本技能
-a[&lt;img src&#61;&#39;../assets/imgs/About/Book2.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;學習2 Lv 10 可以開始學一些技術了.&#39;/&gt;]
----b[&lt;img src&#61;&#39;../assets/imgs/About/Language.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;語言2 Lv 10 除了母語還可以學點外語.&#39;/&gt;]
-a
----c[&lt;img src&#61;&#39;../assets/imgs/About/Math2.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;數學 Lv 10 邁入工程與科學的第一步.&#39;/&gt;]
-a
----f[&lt;img src&#61;&#39;../assets/imgs/About/Computer.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;電腦 Lv 10 開始用電腦,玩點遊戲.&#39;/&gt;]
-b
----d[&lt;img src&#61;&#39;../assets/imgs/About/English.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;英文 Lv 10 可以講點基礎的外語了.&#39;/&gt;]
-b
----e[&lt;img src&#61;&#39;../assets/imgs/About/Chinese.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;中文 Lv 10 要學點表達能力.&#39;/&gt;]
-c
----g[&lt;img src&#61;&#39;../assets/imgs/About/Math3.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;進階數學 Lv 10 要變強了.&#39;/&gt;]
-f
----h[&lt;img src&#61;&#39;../assets/imgs/About/RM.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;PRG Maker Lv 10 學習使用RPG Maker設計遊戲.&#39;/&gt;]
+coding[&lt;img src&#61;&#39;../assets/imgs/About/Coding.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;程式語言 Lv 10 開始寫程式了.&#39;/&gt;]
+
+c[&lt;img src&#61;&#39;../assets/imgs/About/C.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;C語言 Lv 10 開始學習C語言.&#39;/&gt;]
+
+c++[&lt;img src&#61;&#39;../assets/imgs/About/C++.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;C++ Lv 10 開始學習C++語言.&#39;/&gt;]
+
+unity[&lt;img src&#61;&#39;../assets/imgs/About/unity.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;Unity Lv 10 為了開發遊戲踏出了第一步.&#39;/&gt;]
+
+c#[&lt;img src&#61;&#39;../assets/imgs/About/CSharp.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;C# Lv 10 為了開發遊戲踏出了第一步.&#39;/&gt;]
+
+ruby[&lt;img src&#61;&#39;../assets/imgs/About/ruby.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;Ruby Lv 10 為了精通Rpg Maker.&#39;/&gt;]
+
+rm2[&lt;img src&#61;&#39;../assets/imgs/About/RM2.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;RPG Maker2 Lv 10 會寫腳本可以做更多功能了.&#39;/&gt;]
+
+ts[&lt;img src&#61;&#39;../assets/imgs/About/TS.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;Type Script Lv 10 為了賺錢碰了一點.&#39;/&gt;]
+
+python[&lt;img src&#61;&#39;../assets/imgs/About/py.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;Python Lv 10 為了作業碰了一點.&#39;/&gt;]
+
+ml[&lt;img src&#61;&#39;../assets/imgs/About/ml.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;機器學習 Lv 10 為了作又業碰了一點.&#39;/&gt;]
+
+unreal[&lt;img src&#61;&#39;../assets/imgs/About/Unreal.png&#39; width&#61;&#39;30&#39;height&#61;&#39;30&#39;title&#61;&#39;Unreal Lv 10 學了一點.&#39;/&gt;]
+
+coding---c---c++---c#
+c#---unity
+coding---ruby---rm2
+coding---ts
+coding---python---ml
+rm2---unity
+c++---unreal
 end
 </div>
 
