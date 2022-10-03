@@ -27,7 +27,7 @@ toc: true
       </li>
       {% endfor %}
       </ul>
-    {% end if%}
+    {% endif %}
   </div>
 {% endfor %}
 </div>
