@@ -10,15 +10,11 @@ author_profile: true
     {% capture category_name %}{{ category | first }}{% endcapture %}
     {% if category_name == "遊戲" %}
         {% for post in site.categories[category_name] %}
-            <ul>
-            {% for post in site.categories[category_name] %}
-            <li>
-            <article class="archive-item">
-              <h4><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4>
-            </article>
-            </li>
-            {% endfor %}
-            </ul>
+        <li>
+        <article class="archive-item">
+          <h4><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4>
+        </article>
+        </li>
         {% endfor %}
     {% endif %}
 {% endfor %}
