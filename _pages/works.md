@@ -7,8 +7,6 @@ permalink: /works/
 author_profile: true
 toc: true
 ---
-內容目前正在施工中
-{: .notice--danger}
 
 <div id="archives">
 {% for category in site.categories %}
