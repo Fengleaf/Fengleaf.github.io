@@ -11,8 +11,8 @@ tags:
 mermaid: true
 ---
 
-# 渲染流程 Rendering Pipeline
-## 概覽
+## 渲染流程 Rendering Pipeline
+### 概覽
 給予物件、光源、相機、繪製出圖形。
 ![](/assets/imgs/Notes/RealTimeRendering/ch2/CameraAndObjects.png)
 * 展示相機顯示物件的示例圖，只有範圍(view volume)內的物件能夠看到。
@@ -33,19 +33,19 @@ mermaid: true
 
 </br>
 
-## Application 應用階段
+### Application 應用階段
 &emsp;&emsp;由應用程式負責，在CPU上執行。諸如碰撞偵測、動畫、物理模擬...等。
 &emsp;&emsp;在CPU執行，開發者可以完全決定這個階段要做什麼，也會影響效率。此外，部分程式能透過 *compute shader* 來讓GPU執行解此提升效率。  
 &emsp;&emsp;這個階段沒有子階段，但為了提升效能，能夠透過CPU多核執行來處理。
 
-## Geometry Processing 幾何處理
+### Geometry Processing 幾何處理
 &emsp;&emsp;幾何相關，如變換、投影...等，此階段負責要繪製什麼、怎麼繪製、繪製在哪裡，通常由GPU執行。
 &emsp;&emsp;逐頂點執行、逐三角形執行。此階段還會再細分成四個子階段。
 ![](/assets/imgs/Notes/RealTimeRendering/ch2/Geometry.png)
 
-### 頂點著色 Vertex Shading, 投影 Projecttion
+#### 頂點著色 Vertex Shading, 投影 Projecttion
 
-> &emsp;&emsp;用於計算頂點位置以及決定頂點資料如何輸出，如法線或貼圖座標。這個可程式化的頂點處理稱為 *頂點著色器 (vertex shader)* 。  
+&emsp;&emsp;用於計算頂點位置以及決定頂點資料如何輸出，如法線或貼圖座標。這個可程式化的頂點處理稱為 *頂點著色器 (vertex shader)* 。  
   
 > &emsp;&emsp;空間變換
 > * *模型空間(model space)* 以模型中心為原點的空間
@@ -66,12 +66,36 @@ mermaid: true
 > * 透視投影中，距離相機越遠的物體，會看起來越小。此時 view volume 稱為 *frustum*，會是一個長方形底的角錐體。  
 經過投影後，物體就位於 *裁剪座標(clip coordinate)*  
   
-###  Optional Vertex Processing  
-  
+####  Optional Vertex Processing  
+&emsp;&emsp;頂點處理完成後，有一些可選的行為可以執行。*Tessellation*, *Geometry Shading*, 和 *Stream Output*. 
+* 曲面細分著色器 Tessellation
+> &emsp;&emsp;問題: 用三角形填滿一顆球，如果數量少時，從遠處看沒問題，從近處看會有明顯輪廓。數量多時，浪費空間和效能。  
+> &emsp;&emsp;目的: 用適合的數量填充物件。  
+> &emsp;&emsp;頂點可以形成一個曲面，這個曲面包含一群補丁，每群補丁由頂點形成。*Tessellation* 包含 *hull shader*, *tessellator*, 和 *domain shader*，用來將一組頂點轉換成更多的頂點，形成新的三角形。並利用相機決定形成的數量，近則多，遠則少。 
 
+* 幾何著色器 Geometry Shader
+> &emsp;&emsp;比 *Tessellation* 更早出現，在 GPU 上常見。藉由輸入各種圖元，並產生新的頂點。用途之一為粒子模擬，假設一個煙火爆炸，每個火球可以用一個點表示，幾何著色器可以將點轉換為兩個三角形形成的正方形，並面向觀察者。
 
-## Rasterization Stage 光柵化階段
-## Pixel Processing 像素處理
+* Stream Output
+> &emsp;&emsp;可以讓我們決定計算完的頂點要送到哪裡。除了直接往下一步流程送，我們可以存在陣列裡，並提供給 CPU 或 GPU 使用。
+
+#### 剪裁 Clipping
+&emsp;&emsp;只有位於相機可見範圍 *(view volume)* 中的圖元需要送到光柵化階段。  
+&emsp;&emsp;完全在範圍中的物件會往下一階段送，完全不在範圍內的會直接捨棄，只有部分在範圍內，部分在範圍外的物件需要剪裁。  
+&emsp;&emsp;剪裁使用由投影產生的四個值的齊次座標來執行，透視空間中的數值通常不會線性插值，因此第四個座標是需要的，以讓透視投影正確的插值和剪裁。最後執行透視除法 *perspective division*，將齊次座標的前三個值除以第四個值，得到設備標準三維座標 *normalized device coordinates*。
+> &emsp;&emsp;齊次座標第四個值由投影產生，表示相機視錐體的剪裁範圍，因次用前三個座標 x, y, z 除以第四個值 w, 用來得到對應的座標。因直接使用視錐體計算邊界困難，所以需要 *canonical view volume* ，讓剪裁範圍為一個正方形，方便計算。 
+
+![](/assets/imgs/Notes/RealTimeRendering/ch2/Clipping.png)   
+
+#### 屏幕映射 Screen Mapping  
+&emsp;&emsp;將三維座標轉換為螢幕二維座標。x, y座標為螢幕座標 *screen coordinates*, 螢幕座標加上 z 座標為 窗口座標 *window coordinates* 。
+![](/assets/imgs/Notes/RealTimeRendering/ch2/ScreenMapping.png) 
+> &emsp;&emsp;整數與浮點數和像素的關聯。  
+![](/assets/imgs/Notes/RealTimeRendering/ch2/Formula.png)  
+*d* 為整數， *c* 為浮點數，這個公式的目的在於讓像素對齊，確保圖像不會出現鋸齒或失真。
+
+### Rasterization Stage 光柵化階段
+### Pixel Processing 像素處理
  
 
 
