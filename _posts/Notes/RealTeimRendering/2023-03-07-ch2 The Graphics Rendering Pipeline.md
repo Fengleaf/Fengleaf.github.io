@@ -91,8 +91,8 @@ mermaid: true
 &emsp;&emsp;將三維座標轉換為螢幕二維座標。x, y座標為螢幕座標 *screen coordinates*, 螢幕座標加上 z 座標為 窗口座標 *window coordinates* 。
 ![](/assets/imgs/Notes/RealTimeRendering/ch2/ScreenMapping.png) 
 > &emsp;&emsp;整數與浮點數和像素的關聯。  
-![](/assets/imgs/Notes/RealTimeRendering/ch2/Formula.png)  
-*d* 為整數， *c* 為浮點數，這個公式的目的在於讓像素對齊，確保圖像不會出現鋸齒或失真。
+> &emsp;&emsp;![](/assets/imgs/Notes/RealTimeRendering/ch2/Formula.png)  
+> &emsp;&emsp;*d* 為整數， *c* 為浮點數，這個公式的目的在於讓像素對齊，確保圖像不會出現鋸齒或失真。
 
 ### Rasterization Stage 光柵化階段
 ### Pixel Processing 像素處理
