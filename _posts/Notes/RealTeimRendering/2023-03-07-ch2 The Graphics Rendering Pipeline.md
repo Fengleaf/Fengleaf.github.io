@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Ch2. The Graphics Rendering Pipeline
-date: 2023-03-07 10:32:19 +0800
+date: 2023-03-08 14:20:29 +0800
 excerpt: 筆記
 categories:
 - 筆記
@@ -95,6 +95,19 @@ mermaid: true
 > &emsp;&emsp;*d* 為整數， *c* 為浮點數，這個公式的目的在於讓像素對齊，確保圖像不會出現鋸齒或失真。
 
 ### Rasterization Stage 光柵化階段
+&emsp;&emsp;找出所有要繪製的像素。又稱為 *掃描轉換(scan conversion)*  
+&emsp;&emsp;分為兩個階段  
+* 三角形設置 (triangle setup)
+* 三角形遍歷 (triangle traversal)
+> #### Triangle Setup  
+> 這個階段會計算三角形的 *微分(differentials)* 與 *邊緣方程(edge equations)*，這些資料會用在 *triangle traversal* 中
+> * 微分(differentials): 計算每個像素的位置變化，主要用來計算邊緣方程與插值因子。
+> * 邊緣方程(edge equations): 用來計算三角形邊緣的方程式，這些方程式可以用來判斷一個像素是否在三角形內部，進而決定哪些像素需要進行顏色計算。
+> * 插值因子(Interpolation): 用來計算每個像素的插值權重，這些權重可以用來進行各種插值運算，例如在三角形上進行紋理映射等操作。  
+
+> #### Triangle Traversal
+> 主要用來尋找哪個像素在三角形內。使用三角形的頂點進行內插，來產生一個fragment資料，例如顏色、深度等，最終，所有在三角形內部的像素或採樣點都會生成對應的Fragment，並被送往下一個階段的Pixel Processing進行後續的計算。
+
 ### Pixel Processing 像素處理
  
 
