@@ -97,8 +97,10 @@ mermaid: true
 ### Rasterization Stage 光柵化階段
 &emsp;&emsp;找出所有要繪製的像素。又稱為 *掃描轉換(scan conversion)*  
 &emsp;&emsp;分為兩個階段  
+
 * 三角形設置 (triangle setup)
-* 三角形遍歷 (triangle traversal)
+* 三角形遍歷 (triangle traversal)  
+
 > #### Triangle Setup  
 > 這個階段會計算三角形的 *微分(differentials)* 與 *邊緣方程(edge equations)*，這些資料會用在 *triangle traversal* 中
 > * 微分(differentials): 計算每個像素的位置變化，主要用來計算邊緣方程與插值因子。
@@ -109,10 +111,12 @@ mermaid: true
 > 主要用來尋找哪個像素在三角形內。使用三角形的頂點進行內插，來產生一個fragment資料，例如顏色、深度等，最終，所有在三角形內部的像素或採樣點都會生成對應的Fragment，並被送往下一個階段的 *Pixel Processing* 進行後續的計算。
 
 ### Pixel Processing 像素處理
-&emsp;&emsp;在這個階段所有像素被視為位於三角形內，並且會進行逐像素計算。
-&emsp;&emsp;分為兩個階段
+&emsp;&emsp;在這個階段所有像素被視為位於三角形內，並且會進行逐像素計算。  
+&emsp;&emsp;分為兩個階段  
+
 * 像素渲染(Pixel Shading)
-* 合併 (Meging)
+* 合併 (Meging)  
+
 > #### 像素著色 (Pixel Shading)
 > &emsp;&emsp;這裡會對所有像素進行渲染計算，使用來自於前一個階段送來的插值資料。這個階段會由程式化GPU核心計算，例如由程式設計師提供的 *fragment shader*。最後會有多個顏色送往下個階段。  
 > &emsp;&emsp;這裡可以應用多個技術，其中之一為 *紋理計算(texturing)*，將多張圖片結合到一個物件當中，圖片可以是1, 2, 3維。
