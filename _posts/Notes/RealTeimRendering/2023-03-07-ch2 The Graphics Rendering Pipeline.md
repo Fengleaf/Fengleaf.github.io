@@ -121,7 +121,7 @@ mermaid: true
 > #### 合併 (Meging)
 > &emsp;&emsp;所有像素的資訊都儲存在 *顏色緩衝區 color buffer* 中，為一個顏色的陣列，每個顏色包含 紅、綠、藍。合併階段的功能在於將像素著色階段產生的片段(fragment)顏色與當前存儲在緩衝區中的顏色相結合。  
 > &emsp;&emsp;這個階段又稱為 ROP, *raster operations (pipeline)* 或 *render output unit*  
-> &emsp;&emsp;可見性處理，使用 *z-buffer* 或稱為 *深度緩衝區 depth buffer* 演算法，*z-buffer* 大小和形狀與 color buffer 一樣，儲存了每個像素最接近圖元的 *z值*，當一個圖元正在渲染到某個像素時，它在該像素上的 z值被計算並與 *z-Buffer* 中相應像素的 z值 進行比較。如果新的 z值比 z-buffer 中的 z值更小，那麼正在渲染的圖元比先前最靠近相機的圖元更接近相機。因此，該像素的 z值和顏色將被更新為正在繪製的圖元的 z值和顏色。如果計算出的Z值大於 z-buffer 中的 z值，則 color buffer 和 z-buffer 保持不變。
+> &emsp;&emsp;可見性處理，使用 *z-buffer* 或稱為 *深度緩衝區 depth buffer* 演算法，*z-buffer* 大小和形狀與 color buffer 一樣，儲存了每個像素最接近圖元的 *z值*，當一個圖元正在渲染到某個像素時，它在該像素上的 z值被計算並與 *z-Buffer* 中相應像素的 z值 進行比較。如果新的 z值比 z-buffer 中的 z值更小，那麼正在渲染的圖元比先前最靠近相機的圖元更接近相機。因此，該像素的 z值和顏色將被更新為正在繪製的圖元的 z值和顏色。如果計算出的Z值大於 z-buffer 中的 z值，則 color buffer 和 z-buffer 保持不變。  
 > &emsp;&emsp;*alpha channel* 儲存每個像素的不透明度值，在舊的API中，這個值用來根據 alpha測試 來捨棄像素。現今這個操作可以藉由程式完成，並且可以確保透明像素不影響 z-buffer。  
 > &emsp;&emsp;*模板緩衝區 stencil buffer* 記錄已渲染的圖元的位置，每個像素有 8 個 bits。可以使用各種函數將圖元渲染到模板緩衝區中，然後可以使用緩衝區的內容來控制顏色緩衝區和深度緩衝區中的渲染。 例如，一個實心圓被繪製到模板緩衝區，可以與一個運算符號結合，使得只有圓存在的地方才可以將圖元繪製到顏色緩衝區中，達到 mask 效果。
 > &emsp;&emsp; *幀緩衝區 framebuffer* 通常由所有緩衝區組合而成。
