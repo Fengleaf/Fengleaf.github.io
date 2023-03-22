@@ -11,14 +11,14 @@ tags:
 mermaid: true
 ---
 
-## 渲染流程 Rendering Pipeline
+## 渲染管線 Rendering Pipeline
 ### 概覽
 給予物件、光源、相機、繪製出圖形。
 ![](/assets/imgs/Notes/RealTimeRendering/ch2/CameraAndObjects.png)
 * 展示相機顯示物件的示例圖，只有範圍(view volume)內的物件能夠看到。
 
 ![](/assets/imgs/Notes/RealTimeRendering/ch2/Pipeline.png)
-* 渲染流程分為四個階段，每個階段還能各自有自己的Pipeline，即有更細的子階段。
+* 渲染管線分為四個階段，每個階段還能各自有自己的Pipeline，即有更細的子階段。
 
 * 渲染速度計算: frames per second(FPS)，即每秒渲染幾張圖片。
 
@@ -106,9 +106,23 @@ mermaid: true
 > * 插值因子(Interpolation): 用來計算每個像素的插值權重，這些權重可以用來進行各種插值運算，例如在三角形上進行紋理映射等操作。  
 
 > #### Triangle Traversal
-> 主要用來尋找哪個像素在三角形內。使用三角形的頂點進行內插，來產生一個fragment資料，例如顏色、深度等，最終，所有在三角形內部的像素或採樣點都會生成對應的Fragment，並被送往下一個階段的Pixel Processing進行後續的計算。
+> 主要用來尋找哪個像素在三角形內。使用三角形的頂點進行內插，來產生一個fragment資料，例如顏色、深度等，最終，所有在三角形內部的像素或採樣點都會生成對應的Fragment，並被送往下一個階段的 *Pixel Processing* 進行後續的計算。
 
 ### Pixel Processing 像素處理
- 
+&emsp;&emsp;在這個階段所有像素被視為位於三角形內，並且會進行逐像素計算。
+&emsp;&emsp;分為兩個階段
+* 像素渲染(Pixel Shading)
+* 合併 (Meging)
+> #### 像素著色 (Pixel Shading)
+> &emsp;&emsp;這裡會對所有像素進行渲染計算，使用來自於前一個階段送來的插值資料。這個階段會由程式化GPU核心計算，例如由程式設計師提供的 *fragment shader*。最後會有多個顏色送往下個階段。  
+> &emsp;&emsp;這裡可以應用多個技術，其中之一為 *紋理計算(texturing)*，將多張圖片結合到一個物件當中，圖片可以是1, 2, 3維。
+> &emsp;&emsp;![](/assets/imgs/Notes/RealTimeRendering/ch2/Texture.png) 
 
-
+> #### 合併 (Meging)
+> &emsp;&emsp;所有像素的資訊都儲存在 *顏色緩衝區 color buffer* 中，為一個顏色的陣列，每個顏色包含 紅、綠、藍。合併階段的功能在於將像素著色階段產生的片段(fragment)顏色與當前存儲在緩衝區中的顏色相結合。  
+> &emsp;&emsp;這個階段又稱為 ROP, *raster operations (pipeline)* 或 *render output unit*  
+> &emsp;&emsp;可見性處理，使用 *z-buffer* 或稱為 *深度緩衝區 depth buffer* 演算法，*z-buffer* 大小和形狀與 color buffer 一樣，儲存了每個像素最接近圖元的 *z值*，當一個圖元正在渲染到某個像素時，它在該像素上的 z值被計算並與 *z-Buffer* 中相應像素的 z值 進行比較。如果新的 z值比 z-buffer 中的 z值更小，那麼正在渲染的圖元比先前最靠近相機的圖元更接近相機。因此，該像素的 z值和顏色將被更新為正在繪製的圖元的 z值和顏色。如果計算出的Z值大於 z-buffer 中的 z值，則 color buffer 和 z-buffer 保持不變。
+> &emsp;&emsp;*alpha channel* 儲存每個像素的不透明度值，在舊的API中，這個值用來根據 alpha測試 來捨棄像素。現今這個操作可以藉由程式完成，並且可以確保透明像素不影響 z-buffer。  
+> &emsp;&emsp;*模板緩衝區 stencil buffer* 記錄已渲染的圖元的位置，每個像素有 8 個 bits。可以使用各種函數將圖元渲染到模板緩衝區中，然後可以使用緩衝區的內容來控制顏色緩衝區和深度緩衝區中的渲染。 例如，一個實心圓被繪製到模板緩衝區，可以與一個運算符號結合，使得只有圓存在的地方才可以將圖元繪製到顏色緩衝區中，達到 mask 效果。
+> &emsp;&emsp; *幀緩衝區 framebuffer* 通常由所有緩衝區組合而成。
+> &emsp;&emsp; 當一個圖元被送到光柵化階段，那些可見的點被繪製在螢幕上，為了避免人眼看到正在被光柵化並發送到螢幕的原始形狀，會使用 *雙緩衝區 double buffering*。這意味著場景的渲染是在 *後緩衝區(back buffer)* 中進行的。一旦場景在後緩衝區中渲染完成，後緩衝區的內容就會與之前顯示在螢幕上的 *前緩衝區(front buffer)* 的內容進行交換。交換通常發生在 *垂直消隱期間(vertical retrace)*，這是一個安全的時間點。
