@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Ch2. The Graphics Rendering Pipeline
-date: 2023-03-22 11:39:32
+date: 2023-03-22 11:39:32 +0800
 excerpt: 筆記
 categories:
 - 筆記
